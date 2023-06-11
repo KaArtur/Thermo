@@ -1,3 +1,6 @@
+
+#Artur Kawa
+
 # Thermo
 
 Aplikacja bedzie wyliczać uproszczoną metoda zapotrzebowanie na cieplo do budynku oraz zaproponuje dobor odpowiedniego urzadzenia grzewczego wzgledem danych budynku. Aplikcja bedzie zbierac dane klientow (dane o budynku, dane klienta) chcących skorzystać z pomocy przy pozyskaniu dofinansowania na ten cel.
