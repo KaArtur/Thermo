@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PartnerController {
 
 
-
     @GetMapping("/partner")
     public String partnerPage(){
         return "partnerPage";

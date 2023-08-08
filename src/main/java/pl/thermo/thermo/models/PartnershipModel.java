@@ -32,6 +32,14 @@ public class PartnershipModel {
         return businessName;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void setBusinessName(String businessName) {
         this.businessName = businessName;
     }
@@ -68,7 +76,8 @@ public class PartnershipModel {
         this.NIP = NIP;
     }
 
-    public PartnershipModel(String businessName, String street, String postalCode, String city, String NIP) {
+    public PartnershipModel(Long id, String businessName, String street, String postalCode, String city, String NIP) {
+        this.id = id;
         this.businessName = businessName;
         this.street = street;
         this.postalCode = postalCode;

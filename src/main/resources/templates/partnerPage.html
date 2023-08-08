@@ -11,12 +11,21 @@
       </p>
     </div>
 
-    <form action="" method="post">
-      <div>
+    <form action="@{/submit}"  method="post">
+      <div  class="form-row">
         <div class="form-field">
-          <input placeholder="Nazwa firmy" th:field="*{businessName}" type="text" class="input"/>
+          <input placeholder="Nazwa firmy"  type="text" class="input"/>
           <span class="error-msg" th:if="${#fields.hasErrors('businessName')}">Imię powinno mieć długość od 2 do 30 znaków.</span>
         </div>
+        <div class="form-field">
+          <input placeholder="Nazwa firmy"  type="text" class="input"/>
+          <span class="error-msg" th:if="${#fields.hasErrors('businessName')}">Imię powinno mieć długość od 2 do 30 znaków.</span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="input" placeholder="Wprowadź email">
+        </div>
+
       </div>
 
 

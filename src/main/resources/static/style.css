@@ -44,7 +44,7 @@ table tr > td:last-child {
 }
 
 @media only screen and (min-width: 1200px) {
-    .container page-nav  {
+    .container  {
         width: 50%;
     }
 }
