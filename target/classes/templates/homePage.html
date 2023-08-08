@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: template (~{:: #home-page-content})}">
+<section id="home-page-content">
+  <div class="container">
+
+    <div>
+      <h2>Sprawdź naszą oferte!</h2>
+      <p> <i class="bi bi-lightbulb"></i> Czy wiesz jak odpowiednio dobrane źródło ciepła wpływa na koszty eksploatacji twojego budynku?</p>
+      <p>  <i class="bi bi-lightbulb"></i>  Czy poszukujesz informacji o tym jak pozyskać dotacje na prace termomodernizacyjne?</p>
+      <p>  <i class="bi bi-lightbulb"></i>  Czy szukasz sprawdzonego wykonawcy?</p>
+      <p>  <i class="bi bi-lightbulb"></i>  Czy jesteś wykonawcą instalacyjno budowlanym i szukasz konkretnych ofert?</p>
+    </div>
+    <div>
+      <img id="energy-image" th:src="@{/img/energy.png}" alt="energy">
+    </div>
+    <div class="button-row">
+      <a class="btn" href="">Znajdź swojego wykonawcę!</a>
+    </div>
+  </div>
+</section>
+</html>

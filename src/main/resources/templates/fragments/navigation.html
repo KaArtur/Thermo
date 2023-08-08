@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<nav id="page-nav" th:fragment="nav">
+    <div class="container" id="nav-row">
+        <a th:href="@{/}"> <img id="logo-image"  th:src="@{/img/logo.PNG}" alt="logo"/> </a>
+        <a th:href="@{/calc}" class="nav-item">Kalkulator zapotrzebowania</a>
+        <a th:href="@{/information}" class="nav-item">Program Czyste Powietrze</a>
+        <a th:href="@{/partner}" class="nav-item">Zostań partnerem</a>
+        <a th:href="@{/takePart}" class="nav-item">Skorzystaj z programu</a>
+        <a th:href="@{/database}" class="nav-item">Baza firm</a>
+        <a th:href="@{/contact}" class="nav-item">Kontakt</a>
+    </div>
+    <div class="container" id="strip">
+
+    </div>
+
+
+</nav>
+</body>
+</html>

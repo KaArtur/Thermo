@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: template (~{:: #information-page-content})}">
+<section id="information-page-content">
+  <div class="container">
+
+    <div>
+      <h2>Program Czyste Powietrze</h2>
+      <p> Program Priorytetowy Czyste Powietrze to kompleksowy program, którego celem jest poprawa
+        jakości powietrza oraz zmniejszenie emisji gazów cieplarnianych poprzez wymianę źródeł ciepła
+        i poprawę efektywności energetycznej budynków mieszkalnych jednorodzinnych.
+        Program skupia się na wymianie starych pieców i kotłów na paliwo stałe oraz termomodernizacji
+        budynków jednorodzinnych by efektywnie zarządzać energią. Działania te nie tylko pomogą chronić środowisko,
+        ale dodatkowo zwiększą domowy budżet, dzięki oszczędnościom finansowym.</p>
+    </div>
+    <div>
+      <img id="energy-image" th:src="@{/img/energy.png}" alt="energy">
+    </div>
+    <div class="button-row">
+      <a class="btn" href="">Znajdź swojego wykonawcę!</a>
+    </div>
+  </div>
+</section>
+</html>

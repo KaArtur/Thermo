@@ -1,0 +1,240 @@
+:root {
+    --primary: #222222;
+    --secondary: #1E87F0;
+    --warning: #F0506E;
+    --white: #FFFFFF;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+}
+
+html, body {
+    margin: 0;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+table tr > td:last-child {
+    text-align: right;
+}
+
+.container {
+    margin: 0 auto;
+
+}
+
+/* ------------------------- */
+
+@media only screen and (max-width: 992px) {
+    .container    {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container     {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container page-nav  {
+        width: 50%;
+    }
+}
+
+
+/* ------------------------- */
+
+#page-nav {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+#nav-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #3d8bd0;
+}
+
+
+.nav-item {
+    padding: 10px 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+#logo-image {
+    width: 50%;
+    object-fit: cover;
+}
+
+#energy-image {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+}
+#strip {
+    background-color: #265c86;
+    height: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    margin: 15px;
+
+}
+
+/* ------------------------- */
+
+section {
+    margin: 30px 0;
+}
+
+.btn {
+    background-color: #3d8bd0;
+    padding: 15px;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 200;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-sm {
+    padding: 5px 15px;
+    font-size: 0.8em;
+}
+
+.input, .textbox {
+    border: 1px solid var(--primary);
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ------------------------- */
+/* Home Page */
+
+#home-page-content .container div {
+    margin: 50px 0;
+    text-align: center;
+}
+
+#home-page-content .button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+#home-page-content h2 {
+    font-size: 2em;
+}
+
+
+
+/* ------------------------- */
+/* Delivery Page */
+
+#delivery-content .container > div {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+#delivery-content .delivery-card {
+    border: 1px solid var(--primary);
+    padding: 20px;
+    width: 50%;
+}
+
+#delivery-content .delivery-card p {
+    font-weight: 100;
+}
+
+#delivery-content img {
+    width: 100%;
+}
+
+/* ------------------------- */
+/* Menu Page */
+
+#menu-content table {
+    width: 100%;
+}
+
+/* ------------------------- */
+/* Partner Page */
+
+#partner-page-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#partner-page-content .form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#partner-page-content .form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#partner-page-content .error-msg {
+    font-size: 0.8em;
+    color: var(--warning);
+    padding: 3px 0;
+}
+
+/* ------------------------- */
+/* Resto Panel Page */
+
+#resto-content table {
+    width: 100%;
+}
+
+#resto-content .pizza-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#resto-content .pizza-list-actions {
+    margin: 30px 0;
+}
+
+/* ------------------------- */
+/* Pizza Page */
+
+#pizza-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#pizza-content .form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
