@@ -11,11 +11,18 @@
       </p>
     </div>
 
-    <form action=""></form>
-    
-    <div>
+    <form action="" method="post">
+      <div>
+        <div class="form-field">
+          <input placeholder="Nazwa firmy" th:field="*{businessName}" type="text" class="input"/>
+          <span class="error-msg" th:if="${#fields.hasErrors('businessName')}">Imię powinno mieć długość od 2 do 30 znaków.</span>
+        </div>
+      </div>
 
-    </div>
+
+
+    </form>
+    
 
     <div>
       <img id="energy-image" th:src="@{/img/energy.png}" alt="energy">
