@@ -1,44 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: template (~{:: #partner-page-content})}">
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: template (~{:: #partner-page-content})}">
 <section id="partner-page-content">
-  <div class="container">
+    <div class="container">
 
-    <div>
-      <h2>Zostań partnerem</h2>
-      <p>Jesteś wykonawcą budowlanym lub instalacyjnym? Zostaw namiar na swoją firmę
-        a trafisz do naszej bazy sprawdzonych wykonawców. Wypełnij formularz kontaktowy
-        wraz z zakresem prac który Cię interesuje.
-      </p>
-    </div>
-
-    <form action="@{/submit}"  method="post">
-      <div  class="form-row">
-        <div class="form-field">
-          <input placeholder="Nazwa firmy"  type="text" class="input"/>
-          <span class="error-msg" th:if="${#fields.hasErrors('businessName')}">Imię powinno mieć długość od 2 do 30 znaków.</span>
-        </div>
-        <div class="form-field">
-          <input placeholder="Nazwa firmy"  type="text" class="input"/>
-          <span class="error-msg" th:if="${#fields.hasErrors('businessName')}">Imię powinno mieć długość od 2 do 30 znaków.</span>
-        </div>
-        <div class="form-row">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" class="input" placeholder="Wprowadź email">
+        <div>
+            <h2>Zostań partnerem</h2>
+            <p>Jesteś wykonawcą budowlanym lub instalacyjnym? Zostaw namiar na swoją firmę
+                a trafisz do naszej bazy sprawdzonych wykonawców. Wypełnij formularz kontaktowy
+                wraz z zakresem prac który Cię interesuje.
+            </p>
         </div>
 
-      </div>
+        <form method="post">
+            <div class="form-row">
+                <div class="form-field">
+                    <input placeholder="Nazwa firmy" type="text" class="input"/>
+                </div>
+                <div class="form-field">
+                    <input placeholder="Nazwa firmy" type="text" class="input"/>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="input" placeholder="Wprowadź email">
+                </div>
+            </div>
+        </form>
 
 
-
-    </form>
-    
-
-    <div>
-      <img id="energy-image" th:src="@{/img/energy.png}" alt="energy">
+        <div>
+            <img id="energy-image" th:src="@{/img/energy.png}" alt="energy">
+        </div>
+        <div class="button-row">
+            <a class="btn" href="">Znajdź swojego wykonawcę!</a>
+        </div>
     </div>
-    <div class="button-row">
-      <a class="btn" href="">Znajdź swojego wykonawcę!</a>
-    </div>
-  </div>
 </section>
 </html>
