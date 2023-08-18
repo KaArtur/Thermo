@@ -144,6 +144,7 @@ section {
     border: none;
     cursor: pointer;
     font-size: 1em;
+    border-radius: 8px;
 }
 
 .btn-sm {
@@ -211,6 +212,13 @@ section {
     width: 450px;
 }
 
+#partner-page-content .half-width {
+    flex: 1;
+    width: 50%;
+
+}
+
+
 #partner-page-content .img-left {
     flex: 1;
     display: flex;
@@ -230,6 +238,8 @@ section {
     border-radius: 5px;
 }
 
+
+
 #partner-page-content .error-msg {
     font-size: 0.8em;
     color: var(--warning);
@@ -237,3 +247,23 @@ section {
 }
 
 /* ------------------------- */
+/* InformationPage */
+
+#information-page-content .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#information-page-content .image-container img {
+    max-width: 100%; /* Maksymalna szerokość obrazka */
+    height: auto; /* Automatyczna wysokość proporcjonalna */
+    margin-bottom: 10px; /* Odstęp między obrazkami */
+    transform: scale(0.8); /* Zmniejszenie obrazka o 20% */
+    transition: transform 0.3s ease; /* Płynna animacja transformacji */
+}
+
+#information-page-content .image-container img:hover {
+    transform: scale(1); /* Przywrócenie normalnej wielkości po najechaniu myszą */
+}

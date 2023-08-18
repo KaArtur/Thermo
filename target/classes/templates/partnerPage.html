@@ -13,23 +13,37 @@
         </div>
         <div class="form-row">
             <div>
-            <form method="post" >
+                <form method="post">
 
 
-                <div class="form-field">
-                    <input placeholder="Nazwa firmy" type="text" class="input"/>
-                </div>
-                <div class="form-field">
-                    <input placeholder="Nazwa firmy" type="text" class="input"/>
-                </div>
-                <div class="form-field">
-                    <input type="email" id="email" name="email" class="input" placeholder="Wprowadź email">
-                </div>
-                <div class="form-field">
-                    <input type="number" id="nip" name="NIP" class="input" placeholder="Wprowadź NIP">
-                </div>
+                    <div class="form-field">
+                        <input placeholder="Nazwa firmy" type="text" class="input"/>
+                    </div>
+                    <div class="form-field">
+                        <input placeholder="Ulica" type="text" class="input"/>
+                    </div>
 
-            </form>
+                    <div class="form-field">
+                        <input type="email" id="email" name="email" class="input" placeholder="Wprowadź email">
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="nip" name="NIP" class="input" placeholder="Wprowadź NIP">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field half-width">
+                            <input placeholder="Miasto" type="text" class="input"/>
+                        </div>
+
+                        <div class="form-field half-width">
+                            <input placeholder="Kod pocztowy" type="text" class="input"/>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <button class="btn">Zapisz</button>
+                    </div>
+
+                </form>
             </div>
             <div class="img-left">
                 <img class="image-worker" th:src="@{/img/workers.jpg}" alt="workers">
