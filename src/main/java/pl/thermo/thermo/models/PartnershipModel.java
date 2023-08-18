@@ -85,4 +85,7 @@ public class PartnershipModel {
         this.city = city;
         this.NIP = NIP;
     }
+
+    public PartnershipModel() {
+    }
 }
