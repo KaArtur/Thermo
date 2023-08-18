@@ -9,7 +9,7 @@
 
 <nav id="page-nav" th:fragment="nav">
     <div class="container" id="nav-row">
-        <a th:href="@{/}"> <img id="logo-image"  th:src="@{/img/logo.PNG}" alt="logo"/> </a>
+        <a th:href="@{/}" class="logo-link"> <img id="logo-image"  th:src="@{/img/logo.PNG}" alt="logo"/> </a>
         <a th:href="@{/calc}" class="nav-item">Kalkulator zapotrzebowania</a>
         <a th:href="@{/information}" class="nav-item">Program Czyste Powietrze</a>
         <a th:href="@{/partner}" class="nav-item">Zostań partnerem</a>
@@ -17,9 +17,7 @@
         <a th:href="@{/database}" class="nav-item">Baza firm</a>
         <a th:href="@{/contact}" class="nav-item">Kontakt</a>
     </div>
-    <div class="container" id="strip">
-
-    </div>
+    <div class="strip"></div>
 
 
 </nav>
