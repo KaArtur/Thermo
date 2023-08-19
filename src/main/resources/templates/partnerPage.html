@@ -13,29 +13,29 @@
         </div>
         <div class="form-row">
             <div>
-                <form method="post">
+                <form th:action="@{/save}" th:object="${partner}" method="post">
 
 
                     <div class="form-field">
-                        <input placeholder="Nazwa firmy" type="text" class="input"/>
+                        <input th:field="*{businessName}" placeholder="Nazwa firmy" type="text" class="input"/>
                     </div>
                     <div class="form-field">
-                        <input placeholder="Ulica" type="text" class="input"/>
+                        <input th:field="*{street}" placeholder="Ulica" type="text" class="input"/>
                     </div>
 
                     <div class="form-field">
-                        <input type="email" id="email" name="email" class="input" placeholder="Wprowadź email">
+                        <input th:field="*{mail}" type="email" id="email" name="email" class="input" placeholder="Wprowadź email">
                     </div>
                     <div class="form-field">
-                        <input type="text" id="nip" name="NIP" class="input" placeholder="Wprowadź NIP">
+                        <input th:field="*{NIP}"  type="text" id="nip" name="NIP" class="input" placeholder="Wprowadź NIP">
                     </div>
                     <div class="form-row">
                         <div class="form-field half-width">
-                            <input placeholder="Miasto" type="text" class="input"/>
+                            <input th:field="*{city}" placeholder="Miasto" type="text" class="input"/>
                         </div>
 
                         <div class="form-field half-width">
-                            <input placeholder="Kod pocztowy" type="text" class="input"/>
+                            <input th:field="*{postalCode}" placeholder="Kod pocztowy" type="text" class="input"/>
                         </div>
                     </div>
 

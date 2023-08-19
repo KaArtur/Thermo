@@ -26,9 +26,11 @@ public class PartnershipModel {
     @Size(min = 2, max = 30)
     private String city;
 
-    @Pattern(regexp = "\\d{10}")
+   // @Pattern(regexp = "\\d{10}")
     private String NIP ;
 
+    @Size(min = 2, max = 30)
+    private String mail;
     public String getBusinessName() {
         return businessName;
     }
@@ -77,15 +79,17 @@ public class PartnershipModel {
         this.NIP = NIP;
     }
 
-    public PartnershipModel(Long id, String businessName, String street, String postalCode, String city, String NIP) {
-        this.id = id;
-        this.businessName = businessName;
-        this.street = street;
-        this.postalCode = postalCode;
-        this.city = city;
-        this.NIP = NIP;
+    public String getMail() {
+        return mail;
     }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+
 
     public PartnershipModel() {
     }
 }
+
