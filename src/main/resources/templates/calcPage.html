@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: template (~{:: #calc-page-content})}">
+<section id="calc-page-content">
+    <div class="container">
+
+        <div>
+            <h2>Kalkulator</h2>
+            <p>Oblicz swoje zapotrzebowanie na moc kotła.
+            </p>
+        </div>
+        <div class="form-row">
+            <div>
+                <form action="/calc" th:object="${calculationModel}" method="post">
+
+                    <label for="calculationYearEnum">Wybierz rok budowy domu</label>
+                    <select id="calculationYearEnum" name="calculationYearEnum" th:field="*{calculationYearEnum}" required>
+                        <option th:each="year : ${T(pl.thermo.thermo.models.CalculationYearEnum).values()}"
+                                th:value="${year}" th:text="${year.getText()}"></option>
+                    </select> <br>
+
+                    <label for="area">Powierzchnia ogrzewana domu:</label>
+                    <input type="text" id="area" name="area" th:field="*{area}" required><br>
+
+                    <div class="form-row">
+                        <button type="submit" class="btn">Oblicz</button>
+                    </div>
+
+                    <h2>Wyniki</h2>
+
+                        <p>Ilość kW: <span th:text="${calculationModel.result}"></span></p>
+
+
+                    <div class="form-row">
+                        <button type="submit" class="btn">Oblicz</button>
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div class="img-left">
+                <img class="image-worker" th:src="@{/img/workers.jpg}" alt="workers">
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+</section>
+</html>
