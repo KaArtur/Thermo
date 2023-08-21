@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import pl.thermo.thermo.models.CalculationModel;
 import pl.thermo.thermo.services.CalculationService;
 
-import java.util.List;
-
 @Controller
 public class CalculationController {
 
@@ -29,8 +27,12 @@ public class CalculationController {
 
     @PostMapping("/calc")
     public String calculateResult(@ModelAttribute CalculationModel calculationModel, Model model) {
-        double result = calculationService.calculateResult(calculationModel);
-        calculationModel.setResult(result);
+        double result = calculationService.calculateResultCO(calculationModel);
+        double result2 = calculationService.calculateResultCWU(calculationModel);
+        double result3 =result +result2 ;
+        calculationModel.setResultCO(result);
+        calculationModel.setResultCWU(result2);
+        calculationModel.setResultSum(result3);
         model.addAttribute("calculationModel", calculationModel);
         return "calcPage";
     }

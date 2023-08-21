@@ -17,14 +17,14 @@ public class CalculationModel {
 
     private Double area;
 
-    private Double result;
+    private Double resultCO;
+    private Double resultCWU;
+    private Double resultSum;
+    private Double people;
+    private Double expenditure;
 
-    public CalculationModel(Long id, CalculationYearEnum calculationYearEnum, Double area, Double result) {
-        this.id = id;
-        this.calculationYearEnum = calculationYearEnum;
-        this.area = area;
-        this.result = result;
-    }
+
+
 
     public CalculationModel() {
     }
@@ -45,6 +45,38 @@ public class CalculationModel {
         this.calculationYearEnum = calculationYearEnum;
     }
 
+    public Double getExpenditure() {
+        return expenditure;
+    }
+
+    public void setExpenditure(Double expenditure) {
+        this.expenditure = expenditure;
+    }
+
+    public Double getPeople() {
+        return people;
+    }
+
+    public void setPeople(Double people) {
+        this.people = people;
+    }
+
+    public Double getResultCWU() {
+        return resultCWU;
+    }
+
+    public void setResultCWU(Double resultCWU) {
+        this.resultCWU = resultCWU;
+    }
+
+    public Double getResultSum() {
+        return resultSum;
+    }
+
+    public void setResultSum(Double resultSum) {
+        this.resultSum = resultSum;
+    }
+
     public Double getArea() {
         return area;
     }
@@ -53,11 +85,11 @@ public class CalculationModel {
         this.area = area;
     }
 
-    public Double getResult() {
-        return result;
+    public Double getResultCO() {
+        return resultCO;
     }
 
-    public void setResult(Double result) {
-        this.result = result;
+    public void setResultCO(Double result) {
+        this.resultCO = result;
     }
 }

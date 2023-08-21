@@ -9,10 +9,18 @@ public class CalculationService {
 
 
 
-    public double calculateResult(CalculationModel calculationModel) {
+    public double calculateResultCO(CalculationModel calculationModel) {
         double result = calculationModel.getCalculationYearEnum().getValue() * calculationModel.getArea() / 1000;
         return result;
     }
+
+    public double calculateResultCWU(CalculationModel calculationModel) {
+        double exponent = -0.244;
+        double var = 9.32 * (1.0 / Math.pow(calculationModel.getPeople(), -exponent));
+        double result = (((calculationModel.getPeople() * (calculationModel.getExpenditure()/1000)) / 18 ) * 0.189 * var * 278) ;
+        return result;
+    }
+
 
 
 }

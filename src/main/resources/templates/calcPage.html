@@ -22,13 +22,21 @@
                     <label for="area">Powierzchnia ogrzewana domu:</label>
                     <input type="text" id="area" name="area" th:field="*{area}" required><br>
 
+                    <label for="people">Ilość osób:</label>
+                    <input type="number" id="people" name="people" th:field="*{people}" required><br>
+
+                    <label for="expenditure">Zużycie cwu:</label>
+                    <input type="number" id="expenditure" name="expenditure" th:field="*{expenditure}" required><br>
+
                     <div class="form-row">
                         <button type="submit" class="btn">Oblicz</button>
                     </div>
 
                     <h2>Wyniki</h2>
 
-                        <p>Ilość kW: <span th:text="${calculationModel.result}"></span></p>
+                        <p>Ilość kW CO: <span th:text="${calculationModel.resultCO}"></span></p>
+                        <p>Ilość kW CWU: <span th:text="${calculationModel.resultCWU}"></span></p>
+                        <p>Ilość potrzebna na cele grzewcze: <span th:text="${calculationModel.resultSum}"></span></p>
 
 
                     <div class="form-row">

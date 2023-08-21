@@ -11,7 +11,7 @@ public enum CalculationYearEnum {
     BETWEEN_1990_AND_2000_PLUS_THERMO("1990-2000 + dodatkowo ocieplony 10cm styropianem", 65),
     BETWEEN_1990_AND_2000("1990-2000", 80),
     UNDER_1990_PLUS_THERMO("Poniżej 1990 + dodatkowo ocieplony 10cm styropianem", 70),
-    UNDER_1990("Poniżej 1990", 100);
+    UNDER_1990("Poniżej 1990", 120);
 
     private final String text;
     private final int value;
