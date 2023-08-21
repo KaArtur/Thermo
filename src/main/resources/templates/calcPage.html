@@ -13,20 +13,29 @@
             <div>
                 <form action="/calc" th:object="${calculationModel}" method="post">
 
+                    <div class="form-field">
                     <label for="calculationYearEnum">Wybierz rok budowy domu</label>
                     <select id="calculationYearEnum" name="calculationYearEnum" th:field="*{calculationYearEnum}" required>
                         <option th:each="year : ${T(pl.thermo.thermo.models.CalculationYearEnum).values()}"
                                 th:value="${year}" th:text="${year.getText()}"></option>
                     </select> <br>
+                    </div>
 
+                    <div class="form-field">
                     <label for="area">Powierzchnia ogrzewana domu:</label>
                     <input type="text" id="area" name="area" th:field="*{area}" required><br>
+                    </div>
 
+                    <div class="form-field">
                     <label for="people">Ilość osób:</label>
                     <input type="number" id="people" name="people" th:field="*{people}" required><br>
+                    </div>
 
-                    <label for="expenditure">Zużycie cwu:</label>
-                    <input type="number" id="expenditure" name="expenditure" th:field="*{expenditure}" required><br>
+                        <div class="form-field">
+                    <label>Zużycie cwu:</label>
+                    <input type="range" id="expenditureRange" name="expenditure" th:field="*{expenditure}" min="40" max="130" required><br>
+                    <input type="number" id="expenditureValue" name="expenditureValue" th:field="*{expenditure}" min="40" max="130" required><br>
+                        </div>
 
                     <div class="form-row">
                         <button type="submit" class="btn">Oblicz</button>
@@ -38,23 +47,14 @@
                         <p>Ilość kW CWU: <span th:text="${calculationModel.resultCWU}"></span></p>
                         <p>Ilość potrzebna na cele grzewcze: <span th:text="${calculationModel.resultSum}"></span></p>
 
-
-                    <div class="form-row">
-                        <button type="submit" class="btn">Oblicz</button>
-                    </div>
-
-
-
                 </form>
             </div>
             <div class="img-left">
-                <img class="image-worker" th:src="@{/img/workers.jpg}" alt="workers">
+                <img class="image-worker" th:src="@{/img/heating.jpg}" alt="heating">
             </div>
         </div>
     </div>
-
-
-
     </div>
 </section>
+
 </html>
