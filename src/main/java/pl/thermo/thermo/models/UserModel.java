@@ -4,6 +4,8 @@ package pl.thermo.thermo.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class UserModel {
@@ -12,7 +14,10 @@ public class UserModel {
     @GeneratedValue
     private long id;
 
+    @NotEmpty
     private String username;
+
+    @Size(min = 3, max = 20)
     private String password;
 
     public UserModel() {

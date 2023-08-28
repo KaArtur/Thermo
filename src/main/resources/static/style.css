@@ -213,7 +213,7 @@ select:focus {
 /* Partner Page */
 
 
-#partner-page-content #calc-page-content .form-row {
+#partner-page-content  .form-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -221,7 +221,7 @@ select:focus {
 
 }
 
-#partner-page-content #calc-page-content .form-field {
+#partner-page-content .form-field {
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
@@ -237,13 +237,13 @@ select:focus {
 }
 
 
-.img-left {
+#partner-page-content .img-left {
     flex: 1;
     display: flex;
     justify-content: flex-end;
 }
 
-.image-worker {
+#partner-page-content .image-worker {
     max-width: 80%;
     height: auto;
 }

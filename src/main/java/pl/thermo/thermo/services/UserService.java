@@ -1,27 +1,28 @@
 package pl.thermo.thermo.services;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.thermo.thermo.models.UserModel;
-import pl.thermo.thermo.repositories.UserRepository;
+
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class UserService {
 
+    private List<UserModel> users;
 
-    private final UserRepository userRepository;
-
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserService() {
+        users = new ArrayList<>();
+        UserModel admin = new UserModel();
+        admin.setUsername("admin");
+        admin.setPassword("admin123");
+        users.add(admin);
     }
 
-    public UserModel registerUser(String username, String password) {
-        UserModel newUser = new UserModel();
-        newUser.setUsername(username);
-        newUser.setPassword(password);
-
-        return userRepository.save(newUser);
+    public UserModel getUserByUsername(String username) {
+        return users.stream()
+                .filter(user -> user.getUsername().equals(username))
+                .findFirst()
+                .orElse(null);
     }
-
-
 }

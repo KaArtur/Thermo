@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: template (~{:: #registration-page-content})}">
+<section id="registration-page-content">
+  <div class="container">
+    <h2>Welcome to the Admin Panel</h2>
+    <p th:if="${loggedInUser}">Logged in as: <span th:text="${loggedInUser}"></span></p>
+    <a th:href="@{/logout}">Logout</a>
+
+  </div>
+</section>
+</html>
