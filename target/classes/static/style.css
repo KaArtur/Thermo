@@ -26,7 +26,6 @@ table tr > td:last-child {
 
 .container {
     margin: 0 auto;
-
 }
 
 /* ------------------------- */
@@ -206,19 +205,26 @@ select:focus {
 }
 
 
-
+.image-worker {
+    max-width: 80%;
+    height: auto;
+}
 
 
 /* ------------------------- */
 /* Partner Page */
 
+#form-container{
+    align-items: center;
+    width: 450px;
+}
 
-#partner-page-content  .form-row {
+#partner-page-content .form-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
     align-items: center;
-
+    width: auto;
 }
 
 #partner-page-content .form-field {
@@ -227,36 +233,21 @@ select:focus {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
-    width: 450px;
+    width: auto;
 }
 
 #partner-page-content .half-width {
     flex: 1;
     width: 50%;
-
-}
-
-
-#partner-page-content .img-left {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-#partner-page-content .image-worker {
-    max-width: 80%;
-    height: auto;
 }
 
 
 #partner-page-content #calc-page-content .input {
-    width: 100%; /* Szerokość 100% grupy inputów */
+    width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
-
 
 #partner-page-content .error-msg {
     font-size: 0.8em;
@@ -286,6 +277,16 @@ select:focus {
     transform: scale(1); /* Przywrócenie normalnej wielkości po najechaniu myszą */
 }
 
+/* ------------------------- */
+/* CalcPage */
+
+
+#calc-page-content .input {
+    width: 100%; /* Szerokość 100% grupy inputów */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
 .slider-container {
     display: flex;
@@ -301,4 +302,20 @@ select:focus {
     width: 60px;
     padding: 5px;
     text-align: center;
+}
+
+
+.custom-table {
+    width: 100%;
+}
+
+/* Stylizacja wierszy tabeli */
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Stylizacja nagłówków kolumn */
+.custom-table thead th {
+    background-color: #333;
+    color: white;
 }

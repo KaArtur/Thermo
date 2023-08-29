@@ -6,6 +6,8 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
+import java.util.List;
+
 @Entity
 public class PartnershipModel {
 
@@ -31,6 +33,28 @@ public class PartnershipModel {
 
     @Size(min = 2, max = 30)
     private String mail;
+
+    private List<IndustryEnum> industryEnum;
+
+    private List<RegionEnum> regionEnum;
+
+
+    public List<IndustryEnum> getIndustryEnum() {
+        return industryEnum;
+    }
+
+    public void setIndustryEnum(List<IndustryEnum> industryEnum) {
+        this.industryEnum = industryEnum;
+    }
+
+    public List<RegionEnum> getRegionEnum() {
+        return regionEnum;
+    }
+
+    public void setRegionEnum(List<RegionEnum> regionEnum) {
+        this.regionEnum = regionEnum;
+    }
+
     public String getBusinessName() {
         return businessName;
     }

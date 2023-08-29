@@ -12,13 +12,18 @@
             </p>
         </div>
 
-        <div>
-            <table>
+        <div  class="table-responsive">
+            <table class="table custom-table">
                 <tr>
                     <th>Nazwa firmy</th>
                     <th>Ulica</th>
                     <th>Email</th>
-                    <!-- other table headers -->
+                    <th>NIP</th>
+                    <th>Miasto</th>
+                    <th>Kod pocztowy</th>
+                    <th>Branża</th>
+                    <th>Region działalności</th>
+
                 </tr>
                 <tr th:each="partner : ${partners}">
                     <td th:text="${partner.businessName}"></td>
@@ -27,7 +32,10 @@
                     <td th:text="${partner.NIP}"></td>
                     <td th:text="${partner.city}"></td>
                     <td th:text="${partner.postalCode}"></td>
-                    <!-- other table data -->
+                    <td th:text="${partner.industryEnum}"></td>
+                    <td th:text="${partner.regionEnum}"></td>
+
+
                 </tr>
             </table>
         </div>
@@ -38,4 +46,5 @@
         <a class="btn" href="">Znajdź swojego wykonawcę!</a>
     </div>
 </section>
+
 </html>
