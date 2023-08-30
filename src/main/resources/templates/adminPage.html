@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: template (~{:: #admin-page-content})}">
+<section id="admin-page-content">
+  <div class="container">
+    <h2>Welcome to the Admin Panel</h2>
+    <p th:if="${loggedInUser}">Logged in as: <span th:text="${loggedInUser}"></span></p>
+    <a th:href="@{/logout}">Logout</a>
+
+    <h2>List Partnerów</h2>
+    <p>Jesteś wykonawcą budowlanym lub instalacyjnym? Zostaw namiar na swoją firmę
+      a trafisz do naszej bazy sprawdzonych wykonawców. Wypełnij formularz kontaktowy
+      wraz z zakresem prac który Cię interesuje.
+    </p>
+  </div>
+
+  <div  class="table-responsive">
+    <table class="table custom-table">
+      <tr>
+        <th>Imię</th>
+        <th>Numer telefonu</th>
+        <th>Branża która cię interesuje</th>
+        <th>Twoja lokalizacja </th>
+
+      </tr>
+      <tr th:each="client : ${clients}">
+        <td th:text="${client.clientName}"></td>
+        <td th:text="${client.phoneNumber}"></td>
+        <td>
+        <span th:each="industry : ${client.industryEnumClient}">
+            <span th:text="${industry.getText()}"></span>
+            <br/>
+        </span>
+        </td>
+        <td th:text="${client.regionEnumClient.getDisplayName()}"></td>
+      </tr>
+    </table>
+
+  </div>
+</section>
+</html>

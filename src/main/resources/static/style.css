@@ -331,6 +331,8 @@ select:focus {
     text-align: center;
 }
 
+/* ------------------------- */
+/* DataBasePage */
 
 .custom-table {
     width: 100%;
@@ -345,4 +347,45 @@ select:focus {
 .custom-table thead th {
     background-color: #333;
     color: white;
+}
+
+
+/* ------------------------- */
+/* Client Page */
+
+#form-container{
+    align-items: center;
+    width: 450px;
+}
+
+#client-page-content .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+    width: auto;
+}
+
+#client-page-content  .form-field {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: auto;
+}
+
+
+
+#client-page-content .input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#client-page-content  .error-msg {
+    font-size: 0.8em;
+    color: var(--warning);
+    padding: 3px 0;
 }

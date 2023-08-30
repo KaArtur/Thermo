@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: template (~{:: #client-page-content})}">
+<section id="client-page-content">
+    <div class="container">
+
+        <div>
+            <h2>Zostań partnerem</h2>
+            <p>Jesteś wykonawcą budowlanym lub instalacyjnym? Zostaw namiar na swoją firmę
+                a trafisz do naszej bazy sprawdzonych wykonawców. Wypełnij formularz kontaktowy
+                wraz z zakresem prac który Cię interesuje.
+            </p>
+        </div>
+
+            <div class="form-container">
+                <form th:action="@{/saveclient}" th:object="${client}" method="post">
+
+                    <div class="form-field">
+                        <span>Wybierz branże</span>
+                        <div>
+                            <label th:each="industry : ${T(pl.thermo.thermo.models.IndustryEnum).values()}" class="checkbox-label">
+                                <input type="checkbox" th:field="*{industryEnumClient}" th:value="${industry}"/>
+                                <span th:text="${industry.getText()}"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <div class="form-field">
+                            <label for="regionEnumClient">Wybierz lokalizację:</label>
+                            <select id="regionEnumClient" th:field="*{regionEnumClient}" class="input">
+                                <option th:each="region : ${T(pl.thermo.thermo.models.RegionEnum).values()}"
+                                        th:value="${region}" th:text="${region.getDisplayName()}"></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <input th:field="*{clientName}" placeholder="Imię" type="text" class="input"/>
+                    </div>
+
+                    <div class="form-field">
+                        <input th:field="*{phoneNumber}" type="number" id="phoneNumber" name="phoneNumber" class="input"
+                               placeholder="Numer telefonu">
+                    </div>
+
+
+                    <div class="form-row">
+                        <button class="btn">Zapisz</button>
+                    </div>
+                </form>
+            </div>
+
+
+        <div class="img-worker-container">
+            <img class="image-worker" th:src="@{/img/workers.jpg}" alt="workers">
+        </div>
+    </div>
+</section>
+</html>
