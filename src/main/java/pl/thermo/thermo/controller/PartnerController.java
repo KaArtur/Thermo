@@ -35,4 +35,5 @@ public class PartnerController {
         return "databasePage";
     }
 
+
 }

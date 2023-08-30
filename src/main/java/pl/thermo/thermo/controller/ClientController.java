@@ -30,7 +30,11 @@ public class ClientController {
         return "redirect:/client";
     }
 
-
+    @PostMapping("/deleteclient")
+    public String deleteAllClients() {
+        clientService.deleteAllClients();
+        return "redirect:/client";
+    }
 
 
 }
