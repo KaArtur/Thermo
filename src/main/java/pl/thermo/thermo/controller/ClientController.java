@@ -27,7 +27,7 @@ public class ClientController {
     @PostMapping("/saveclient")
     public String saveClient(@ModelAttribute("client") ClientModel clientModel) {
         clientService.saveClient(clientModel);
-        return "redirect:/admin/clients";
+        return "redirect:/client";
     }
 
 

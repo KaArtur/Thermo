@@ -4,9 +4,13 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import pl.thermo.thermo.models.ClientModel;
 import pl.thermo.thermo.models.UserModel;
 import pl.thermo.thermo.services.ClientService;
 import pl.thermo.thermo.services.UserService;
+
+import java.util.List;
 
 @Controller
 public class AdminController {
@@ -20,21 +24,20 @@ public class AdminController {
     }
 
     @GetMapping("/admin")
-    public String adminPanel(Model model, HttpSession session) {
+    public String adminPanel(Model model, HttpSession session, @ModelAttribute("client") ClientModel clientModel) {
         String loggedInUser = (String) session.getAttribute("loggedInUser");
         if (loggedInUser != null) {
             UserModel user = userService.getUserByUsername(loggedInUser);
             model.addAttribute("loggedInUser", user);
-            return "adminPage"; // Zwróć nazwę widoku Thymeleaf dla strony admina
         } else {
-            return "redirect:/login"; // Jeśli użytkownik nie jest zalogowany, przekieruj go do strony logowania
+            return "redirect:/login";
         }
+
+        List<ClientModel> clients = clientService.getAllClient();
+        model.addAttribute("clients", clients);
+
+        return "adminPage"; // Zwróć nazwę widoku Thymeleaf dla strony admina
     }
 
-    @GetMapping("/admin/clients")
-    public String listClient(Model model) {
-        model.addAttribute("clients", clientService.getAllClient());
-        return "adminPage";
-    }
 
 }
