@@ -69,6 +69,21 @@ table tr > td:last-child {
 
 }
 
+.nav-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #265c86;
+    color: var(--white);
+    border-radius: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #1E2A44; /* Ciemniejszy kolor przy hoverze */
+    transform: scale(1.05);
+    cursor: pointer;
+}
 
 .nav-item {
     padding: 15px 15px;
@@ -156,19 +171,27 @@ section {
     min-height: 74vh; /* Minimalna wysokość kontenera na całą widoczność ekranu */
 }
 
+
+
+.btn:hover {
+    background-color: #1E2A44;
+}
+
 .btn {
-    background-color: #3d8bd0;
-    padding: 15px;
-    text-transform: uppercase;
-    color: var(--white);
-    font-weight: 200;
+    background-color: #283B5E;
+    color: white;
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 1em;
-    border-radius: 8px;
 }
 
 .btn-sm {
+    background-color: #283B5E;
+    color: white;
+    border: none;
+    border-radius: 5px;
     padding: 5px 15px;
     font-size: 0.8em;
 }
@@ -233,7 +256,7 @@ select:focus {
 }
 
 .image-worker {
-    max-width: 80%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -363,17 +386,10 @@ select {
     border: 1px solid #ccc;
 }
 
-.btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 h2 {
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 1.2rem;
     text-align: center;
 }
@@ -397,7 +413,7 @@ h2 {
 
 /* Stylizacja wierszy tabeli */
 .custom-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #71aee0;
 }
 
 /* Stylizacja nagłówków kolumn */
@@ -409,6 +425,11 @@ h2 {
 .table-name {
     display: block; /* Ustawienie na blok sprawi, że każdy element będzie wyświetlany w osobnej linii */
     margin-bottom: 0.5em; /* Doda odstęp między elementami w linii */
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
 }
 
 /* ------------------------- */
@@ -449,4 +470,35 @@ h2 {
     font-size: 0.8em;
     color: var(--warning);
     padding: 3px 0;
+}
+
+/* ------------------------- */
+/* login Page */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.login-form p {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
 }

@@ -5,55 +5,66 @@
     <div class="container">
 
         <div>
-            <h2>Zostań partnerem</h2>
-            <p>Jesteś wykonawcą budowlanym lub instalacyjnym? Zostaw namiar na swoją firmę
-                a trafisz do naszej bazy sprawdzonych wykonawców. Wypełnij formularz kontaktowy
-                wraz z zakresem prac który Cię interesuje.
+            <h2>Potrzebujesz pomocy</h2>
+            <p>Jeśli czujesz się zagubiony, nie znasz się na ogrzewnictwie ani nie masz pojęcia jak wygladają prace
+                termomodernizacyjne, możemy Ci pomóc. Jeśli potrzebujesz pomocy, chcesz żeby ktoś zaopiekował się
+                twoimi sprawami, żeby przeprowadził Cię za rękę przez cały proces od początku do końca oraz żeby zajął
+                się wszystkimi sprawami dokumentacyjnymi, to dobrze trafiłeś.
+                Z naszym profesjonalnym zespołem wykonamy audyt energetyczny, określimy dokładnie twoje zapotrzebowanie
+                na ciepło, obliczymy odpowiednią grubość docieplenia oraz zaproponujemy inne prace mające na celu
+                poprawę
+                energetyczną twojego budynku. Kolejnym krokiem będzie pozyskanie dotacji z programu Czyste Powietrze, a
+                następnie zaproponujemy odpowiedniego wykonawcę spełniającego Państwa wymagania.
+                Po wykonaniu prac rozliczymy dotację oraz dopilnujemy aby środki trafiły na Państwa konto.
+
+                Jeśli szukasz właśnie takiej pomocy wypełnij poniższy formularz zostawiając swoje dane do kontatku.
+                Oddzwonimy!
+
             </p>
         </div>
 
-            <div class="form-container">
-                <form th:action="@{/saveclient}" th:object="${client}" method="post">
+        <div class="form-container">
+            <form th:action="@{/saveclient}" th:object="${client}" method="post">
 
+                <div class="form-field">
+                    <span>Wybierz co planujesz zmodernizować w swoim domu </span>
+                    <div>
+                        <label th:each="industry : ${T(pl.thermo.thermo.models.IndustryEnum).values()}"
+                               class="checkbox-label">
+                            <input type="checkbox" th:field="*{industryEnumClient}" th:value="${industry}"/>
+                            <span th:text="${industry.getText()}"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-field">
                     <div class="form-field">
-                        <span>Wybierz branże</span>
-                        <div>
-                            <label th:each="industry : ${T(pl.thermo.thermo.models.IndustryEnum).values()}" class="checkbox-label">
-                                <input type="checkbox" th:field="*{industryEnumClient}" th:value="${industry}"/>
-                                <span th:text="${industry.getText()}"></span>
-                            </label>
-                        </div>
+                        <label for="regionEnumClient">Wybierz swoją lokalizację:</label>
+                        <select id="regionEnumClient" th:field="*{regionEnumClient}" class="input">
+                            <option th:each="region : ${T(pl.thermo.thermo.models.RegionEnum).values()}"
+                                    th:value="${region}" th:text="${region.getDisplayName()}"></option>
+                        </select>
                     </div>
+                </div>
 
-                    <div class="form-field">
-                        <div class="form-field">
-                            <label for="regionEnumClient">Wybierz lokalizację:</label>
-                            <select id="regionEnumClient" th:field="*{regionEnumClient}" class="input">
-                                <option th:each="region : ${T(pl.thermo.thermo.models.RegionEnum).values()}"
-                                        th:value="${region}" th:text="${region.getDisplayName()}"></option>
-                            </select>
-                        </div>
-                    </div>
+                <div class="form-field">
+                    <input th:field="*{clientName}" placeholder="Imię" type="text" class="input"/>
+                </div>
 
-                    <div class="form-field">
-                        <input th:field="*{clientName}" placeholder="Imię" type="text" class="input"/>
-                    </div>
+                <div class="form-field">
+                    <input th:field="*{phoneNumber}" type="number" id="phoneNumber" name="phoneNumber" class="input"
+                           placeholder="Numer telefonu">
+                </div>
 
-                    <div class="form-field">
-                        <input th:field="*{phoneNumber}" type="number" id="phoneNumber" name="phoneNumber" class="input"
-                               placeholder="Numer telefonu">
-                    </div>
-
-
-                    <div class="form-row">
-                        <button class="btn">Zapisz</button>
-                    </div>
-                </form>
-            </div>
+                <div class="form-row" style="margin-top: 15px">
+                    <button class="btn">Zapisz</button>
+                </div>
+            </form>
+        </div>
 
 
         <div class="img-worker-container">
-            <img class="image-worker" th:src="@{/img/workers.jpg}" alt="workers">
+            <img class="image-worker" th:src="@{/img/save-money.jpg}" alt="client">
         </div>
     </div>
 </section>

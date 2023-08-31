@@ -14,6 +14,7 @@
 
         <div  class="table-responsive">
             <table class="table custom-table">
+                <thead>
                 <tr>
                     <th>Nazwa firmy</th>
                     <th>Ulica</th>
@@ -23,8 +24,9 @@
                     <th>Kod pocztowy</th>
                     <th>Branża</th>
                     <th>Region działalności</th>
-
                 </tr>
+                </thead>
+                <tbody>
                 <tr th:each="partner : ${partners}">
                     <td th:text="${partner.businessName}"></td>
                     <td th:text="${partner.street}"></td>
@@ -39,6 +41,7 @@
                         <span th:each="region : ${partner.regionEnum}" th:text="${region.getDisplayName()}" class="table-name"></span>
                     </td>
                 </tr>
+                </tbody>
             </table>
         </div>
     </div>

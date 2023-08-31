@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: template (~{:: #admin-page-content})}">
 <section id="admin-page-content">
   <div class="container">
-    <h2>Welcome to the Admin Panel</h2>
+    <h2>Dashboard</h2>
     <p th:if="${loggedInUser}">Jesteś zalogowany na koncie:  <span th:text="${loggedInUser}"></span></p>
 
     <button class="btn" type="button" onclick="window.location.href='/logout'">Wyloguj</button>
@@ -12,12 +12,15 @@
 
     <div  class="table-responsive">
       <table class="table custom-table">
+        <thead>
         <tr>
           <th>Imię</th>
           <th>Numer telefonu</th>
           <th>Branża która cię interesuje</th>
           <th>Twoja lokalizacja </th>
-
+          <th>Edit</th>
+        </thead>
+        <tbody>
         </tr>
         <tr th:each="client : ${clients}">
           <td th:text="${client.clientName}"></td>
@@ -36,6 +39,7 @@
             </form>
           </td>
         </tr>
+        </tbody>
       </table>
 
     </div>
@@ -47,14 +51,14 @@
       <table class="table custom-table">
         <thead>
         <tr>
-          <th>Business Name</th>
-          <th>Street</th>
+          <th>Nazwa firmy</th>
+          <th>Ulica</th>
           <th>Email</th>
           <th>NIP</th>
-          <th>City</th>
-          <th>Postal Code</th>
-          <th>Industry</th>
-          <th>Operating Region</th>
+          <th>Miasto</th>
+          <th>Kod pocztowy</th>
+          <th>Branża</th>
+          <th>Region działalności</th>
           <th>Edit</th>
         </tr>
         </thead>
@@ -82,7 +86,7 @@
           <td>
             <form method="post" th:action="@{/admin/deletePartner}">
               <input type="hidden" name="partnerId" th:value="${partner.id}" />
-              <button type="submit" class="btn btn-danger">Usuń</button>
+              <button type="submit" class="btn-sm">Usuń</button>
             </form>
           </td>
 
