@@ -19,7 +19,7 @@ Aplikacja składa się z zakładek:
 6)  Szukasz pomocy - strona która ma na celu zbieranie potencjalnych klientów, którzy potrzebują pomocy przy szukaniu wykonawcy, przeprowadzeniu przez proces dotacji. Dane zbierane z tego widoku są ukryte. Dopiero po dostaniu się na portal admina można nimi zarządzać
 7)  Dashboard - strona z logowaniem, gdzie po wpisaniu usera: admin oraz hasła: admin123 strona przekierowuje na strone admin. Panel pozwala na podgląd trafiających danych z zakładki Szukasz pomocy oraz na usunięcie konkretnego rekordu za pomocą buttona. Pod tabelką z potencjalnymi klientami jest tabelka z Bazą firm, które trafiały z widoku Zostań partnerem. Jeśli chcemy usunąć jakiś rekord z bazy firm to możemy to wykonać za pomocą buttona, a następnie widok Baza firm zostanie uaktualniony z widokiem Admin.
 
-   Aplikacja wymaga jeszcze kilku ulepszeń, które w niedługiej przyszłości zostaną wykonane
+   Aplikacja wymaga jeszcze kilku ulepszeń, które w niedługiej przyszłości zostaną wykonane. Kilka danych testowych zostało umieszczonych w aplikacji, dostęp do nich jest w widoku admin
 
    Stos technologi użyty w aplikacji:
-   -Java, Spring Boot, thymeleaf, javascript, html, css, postgresSQL
+   -Java, Spring Boot, thymeleaf, javascript, html, css, postgresSQL, aplikacja hostowana na railway
