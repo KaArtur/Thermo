@@ -17,6 +17,7 @@ public class UserModel {
     @NotEmpty
     private String username;
 
+    @NotEmpty
     @Size(min = 3, max = 20)
     private String password;
 

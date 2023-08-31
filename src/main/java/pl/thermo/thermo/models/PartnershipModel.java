@@ -28,7 +28,8 @@ public class PartnershipModel {
     @Size(min = 2, max = 30)
     private String city;
 
-   // @Pattern(regexp = "\\d{10}")
+
+   @Pattern(regexp = "\\d{10}" )
     private String NIP ;
 
     @Size(min = 2, max = 30)

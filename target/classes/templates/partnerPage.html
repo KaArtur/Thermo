@@ -57,6 +57,7 @@
 
                         <div class="form-field half-width">
                             <input th:field="*{postalCode}" placeholder="Kod pocztowy" type="text" class="input"/>
+                            <span class="error-msg" th:if="${#fields.hasErrors('postalCode')}">Kod pocztowy powinien mieć format np. 00-000.</span>
                         </div>
                     </div>
 
