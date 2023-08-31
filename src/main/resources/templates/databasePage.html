@@ -32,10 +32,12 @@
                     <td th:text="${partner.NIP}"></td>
                     <td th:text="${partner.city}"></td>
                     <td th:text="${partner.postalCode}"></td>
-                    <td th:text="${partner.industryEnum}"></td>
-                    <td th:text="${partner.regionEnum}"></td>
-
-
+                    <td>
+                        <span th:each="industry : ${partner.industryEnum}" th:text="${industry.getText() }" class="table-name"></span>
+                    </td>
+                    <td>
+                        <span th:each="region : ${partner.regionEnum}" th:text="${region.getDisplayName()}" class="table-name"></span>
+                    </td>
                 </tr>
             </table>
         </div>

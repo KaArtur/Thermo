@@ -6,7 +6,7 @@
 }
 
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 16px;
 
 }
@@ -226,7 +226,7 @@ select:focus {
     font-size: 2em;
 }
 
-#partner-page-content .img-worker-container{
+.img-worker-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -307,6 +307,18 @@ select:focus {
 /* ------------------------- */
 /* CalcPage */
 
+#calc-page-content .form-row {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#calc-page-content .form-field {
+    margin-bottom: 15px;
+}
 
 #calc-page-content .input {
     width: 100%; /* Szerokość 100% grupy inputów */
@@ -314,6 +326,23 @@ select:focus {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+#calc-page-content label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 
 .slider-container {
     display: flex;
@@ -321,15 +350,43 @@ select:focus {
 }
 
 .slider {
-    width: 300px;
+    width: 70%;
     margin-right: 10px;
 }
 
 .slider-value {
-    width: 60px;
+    width: 30px;
     padding: 5px;
     text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.results {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+
 
 /* ------------------------- */
 /* DataBasePage */
@@ -349,6 +406,10 @@ select:focus {
     color: white;
 }
 
+.table-name {
+    display: block; /* Ustawienie na blok sprawi, że każdy element będzie wyświetlany w osobnej linii */
+    margin-bottom: 0.5em; /* Doda odstęp między elementami w linii */
+}
 
 /* ------------------------- */
 /* Client Page */

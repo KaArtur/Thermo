@@ -33,23 +33,25 @@
 
                         <div class="form-field">
                     <label>Zużycie cwu:</label>
-                    <input type="range" id="expenditureRange" name="expenditure" th:field="*{expenditure}" min="40" max="130" required><br>
+                    <input type="range" id="expenditureRange" name="expenditure" th:field="*{expenditure}" min="40" max="130" required>
                     <input type="number" id="expenditureValue" name="expenditureValue" th:field="*{expenditure}" min="40" max="130" required><br>
                         </div>
 
-                    <div class="form-row">
+                    <div>
                         <button type="submit" class="btn">Oblicz</button>
                     </div>
 
-                    <h2>Wyniki</h2>
 
+
+                    <div class="results">
+                        <h2>Wyniki:</h2> <br>
                         <p>Ilość kW CO: <span th:text="${calculationModel.resultCO}"></span></p>
                         <p>Ilość kW CWU: <span th:text="${calculationModel.resultCWU}"></span></p>
                         <p>Ilość potrzebna na cele grzewcze: <span th:text="${calculationModel.resultSum}"></span></p>
-
+                    </div>
                 </form>
             </div>
-            <div class="img-left">
+            <div class="img-worker-container">
                 <img class="image-worker" th:src="@{/img/heating.jpg}" alt="heating">
             </div>
         </div>
