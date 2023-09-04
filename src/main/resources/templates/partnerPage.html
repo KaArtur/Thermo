@@ -37,22 +37,28 @@
 
                     <div class="form-field">
                         <input th:field="*{businessName}" placeholder="Nazwa firmy" type="text" class="input"/>
+                        <span class="error-msg" th:if="${#fields.hasErrors('businessName')}">Imię powinno mieć długość od 2 do 40 znaków.</span>
                     </div>
                     <div class="form-field">
                         <input th:field="*{street}" placeholder="Ulica" type="text" class="input"/>
+                        <span class="error-msg" th:if="${#fields.hasErrors('street')}">Imię powinno mieć długość od 2 do 30 znaków.</span>
                     </div>
 
                     <div class="form-field">
                         <input th:field="*{mail}" type="email" id="email" name="email" class="input"
                                placeholder="Wprowadź email">
+                        <span class="error-msg" th:if="${#fields.hasErrors('mail')}">Imię powinno mieć długość od 2 do 30 znaków.</span>
                     </div>
                     <div class="form-field">
                         <input th:field="*{NIP}" type="text" id="nip" name="NIP" class="input"
                                placeholder="Wprowadź NIP">
+                        <span class="error-msg" th:if="${#fields.hasErrors('NIP')}">Błąd w polu NIP</span>
                     </div>
+
                     <div class="form-row">
                         <div class="form-field half-width">
                             <input th:field="*{city}" placeholder="Miasto" type="text" class="input"/>
+                            <span class="error-msg" th:if="${#fields.hasErrors('city')}">Imię powinno mieć długość od 2 do 30 znaków.</span>
                         </div>
 
                         <div class="form-field half-width">

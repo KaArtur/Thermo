@@ -3,6 +3,7 @@ package pl.thermo.thermo.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
@@ -28,7 +29,7 @@ public class PartnershipModel {
     @Size(min = 2, max = 30)
     private String city;
 
-
+    @NotBlank(message = "NIP is required")
    @Pattern(regexp = "\\d{10}" )
     private String NIP ;
 
