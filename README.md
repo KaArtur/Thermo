@@ -41,6 +41,7 @@ Update 08/31/2023 The application consists of tabs:
 5) Companies database - records saved on the Become a partner page go here
 6) Looking for help - a website that aims to collect potential customers who need help in finding a contractor, carrying out the grant process. Data collected from this view is hidden. You can manage them only after getting to the admin portal
 7) Dashboard - login page, where after entering the user: admin and password: admin123, the page redirects to the admin page. The panel allows you to view the incoming data from the Looking for help tab and to delete a specific record using the button. Under the table with potential customers, there is a table with the Database of companies that came from the Become a partner view. If we want to delete a record from the company database, we can do it using the button, and then the Company database view will be updated with the Admin view.
+
 The application still needs some improvements, which will be made in the near future. Several test data have been placed in the application, access to them is in the admin view
 
 Technology stack used in the application: -Java, Spring Boot, thymeleaf, javascript, html, css, postgresSQL, application hosted on railway
