@@ -3,6 +3,8 @@
 
 # Thermo
 
+https://thermo.up.railway.app/
+
 Aplikacja bedzie wyliczać uproszczoną metoda zapotrzebowanie na cieplo do budynku oraz zaproponuje dobor odpowiedniego urzadzenia grzewczego wzgledem danych budynku. Aplikcja bedzie zbierac dane klientow (dane o budynku, dane klienta) chcących skorzystać z pomocy przy pozyskaniu dofinansowania na ten cel.
 Podsumowując aplikcja służy do wstepnego oszacowania zapotrzebowania na moc do budynku, poinformowania klienta o możliwym dofinansowaniu, zebraniu danych oraz zapisaniu ich do bazy. 
 
