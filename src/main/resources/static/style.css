@@ -80,7 +80,7 @@ table tr > td:last-child {
 }
 
 .nav-button:hover {
-    background-color: #1E2A44; /* Ciemniejszy kolor przy hoverze */
+    background-color: #1E2A44;
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -102,7 +102,7 @@ table tr > td:last-child {
 #logo-image {
     max-width: 100%;
     height: auto;
-    max-height: 50px; /* Maksymalna wysokość logo */
+    max-height: 50px;
     object-fit: contain;
 }
 
@@ -138,7 +138,7 @@ p {
 
 .footer-links {
     display: flex;
-    flex-grow: 1; /* Działać jako "elastyczny" kontener, aby podzielić przestrzeń równo */
+    flex-grow: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -168,7 +168,7 @@ p {
 
 section {
     margin: 30px 0;
-    min-height: 74vh; /* Minimalna wysokość kontenera na całą widoczność ekranu */
+    min-height: 74vh;
 }
 
 
@@ -316,15 +316,15 @@ select:focus {
 }
 
 #information-page-content .image-container img {
-    max-width: 100%; /* Maksymalna szerokość obrazka */
-    height: auto; /* Automatyczna wysokość proporcjonalna */
-    margin-bottom: 10px; /* Odstęp między obrazkami */
-    transform: scale(0.8); /* Zmniejszenie obrazka o 20% */
-    transition: transform 0.3s ease; /* Płynna animacja transformacji */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
 }
 
 #information-page-content .image-container img:hover {
-    transform: scale(1); /* Przywrócenie normalnej wielkości po najechaniu myszą */
+    transform: scale(1);
 }
 
 /* ------------------------- */
@@ -344,7 +344,7 @@ select:focus {
 }
 
 #calc-page-content .input {
-    width: 100%; /* Szerokość 100% grupy inputów */
+    width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -423,8 +423,8 @@ h2 {
 }
 
 .table-name {
-    display: block; /* Ustawienie na blok sprawi, że każdy element będzie wyświetlany w osobnej linii */
-    margin-bottom: 0.5em; /* Doda odstęp między elementami w linii */
+    display: block;
+    margin-bottom: 0.5em;
 }
 
 .custom-table tbody tr:hover {

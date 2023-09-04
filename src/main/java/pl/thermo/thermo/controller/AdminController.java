@@ -1,7 +1,6 @@
 package pl.thermo.thermo.controller;
 
 import jakarta.servlet.http.HttpSession;
-import javassist.NotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -42,7 +41,7 @@ public class AdminController {
         List<PartnershipModel> partners = partnershipService.getAllPartner();
         model.addAttribute("partners", partners);
 
-        return "adminPage"; // Zwróć nazwę widoku Thymeleaf dla strony admina
+        return "adminPage";
     }
 
     @PostMapping("/admin/deleteClient")
@@ -54,14 +53,14 @@ public class AdminController {
     @PostMapping("/admin/deletePartner")
     public String deletePartner(@RequestParam("partnerId") Long partnerId) {
         partnershipService.deletePartnerById(partnerId);
-        return "redirect:/admin"; // Przekierowanie na stronę z zaktualizowanymi danymi
+        return "redirect:/admin";
     }
 
 
     @PostMapping("/admin/update-partner")
     public String updatePartner(@ModelAttribute("partner") PartnershipModel partnerModel) {
         partnershipService.savePartner(partnerModel);
-        return "redirect:/admin"; // Przekierowanie na stronę z zaktualizowanymi danymi
+        return "redirect:/admin";
     }
 
 }

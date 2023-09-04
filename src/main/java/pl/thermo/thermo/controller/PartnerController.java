@@ -26,7 +26,7 @@ public class PartnerController {
     @PostMapping("/save")
     public String savePartner(@ModelAttribute("partner") PartnershipModel partner) {
         partnershipService.savePartner(partner);
-        return "redirect:/partner"; // Poprawiona ścieżka przekierowania
+        return "redirect:/partner";
     }
 
     @GetMapping("/database")
