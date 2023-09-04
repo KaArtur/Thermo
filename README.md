@@ -14,7 +14,7 @@ Aplikacja składa się z zakładek:
 1) Thermo(strona główna) - krótki opis co znajduje się na stronie oraz button przekierowujący
 2)  Kalkulator zapotrzebowania - po podaniu danych budynku oraz ilosci osob wraz z zuzyciem ciepłej wody na dobe, pokazuje sie wynik mocy dla domu
 3)  Program Czyste Powietrze - strona z grafikami informująca o obecnej dotacji na termomodernizację
-4)  Zostań partnerem - strona na której dany wykonawca który chce trafić do bazdy danych (potencjalna reklama), wpisuje swoje dane a następnie trafia do zakładki (Baza firm). Uwaga wykryty bug (nie zdążyłem wykonać pełnej walidacji, po niepełnym wpisaniu danych może nastąpić błąd 500), zostanie naprawiony w najbliższym czasie
+4)  Zostań partnerem - strona na której dany wykonawca który chce trafić do bazdy danych (potencjalna reklama), wpisuje swoje dane a następnie trafia do zakładki (Baza firm).  
 5)  Baza firm - tutaj trafiają rekordy zapisane na stronie Zostań partnerem
 6)  Szukasz pomocy - strona która ma na celu zbieranie potencjalnych klientów, którzy potrzebują pomocy przy szukaniu wykonawcy, przeprowadzeniu przez proces dotacji. Dane zbierane z tego widoku są ukryte. Dopiero po dostaniu się na portal admina można nimi zarządzać
 7)  Dashboard - strona z logowaniem, gdzie po wpisaniu usera: admin oraz hasła: admin123 strona przekierowuje na strone admin. Panel pozwala na podgląd trafiających danych z zakładki Szukasz pomocy oraz na usunięcie konkretnego rekordu za pomocą buttona. Pod tabelką z potencjalnymi klientami jest tabelka z Bazą firm, które trafiały z widoku Zostań partnerem. Jeśli chcemy usunąć jakiś rekord z bazy firm to możemy to wykonać za pomocą buttona, a następnie widok Baza firm zostanie uaktualniony z widokiem Admin.
