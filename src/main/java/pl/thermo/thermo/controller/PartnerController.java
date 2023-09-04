@@ -1,7 +1,9 @@
 package pl.thermo.thermo.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +26,10 @@ public class PartnerController {
     }
 
     @PostMapping("/save")
-    public String savePartner(@ModelAttribute("partner") PartnershipModel partner) {
+    public String savePartner(@Valid @ModelAttribute("partner") PartnershipModel partner, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "partnerPage";
+        }
         partnershipService.savePartner(partner);
         return "redirect:/partner";
     }
